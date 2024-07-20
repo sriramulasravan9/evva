@@ -1,0 +1,64 @@
+{
+    "menuItems": [
+        {
+            "id": "1",
+            "title": "Home"
+        },
+        {
+            "id": "2",
+            "title": "About  Us"
+        },
+        {
+            "id": "3",
+            "title": "Services",
+            "subMenuItems": [
+                {
+                    "id": "a",
+                    "title": "Staffing"
+                },
+                {
+                    "id": "b",
+                    "title": "Consulting"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "title": "Training",
+            "subMenuItems": [
+                {
+                    "id": "a",
+                    "title": "Data Analytics"
+                },
+                {
+                    "id": "b",
+                    "title": "Modernization"
+                },
+                {
+                    "id": "c",
+                    "title": "Artificial Intelligence"
+                },
+                {
+                    "id": "d",
+                    "title": "Block Chain & Crypto"
+                },
+                {
+                    "id": "e",
+                    "title": "Gen AI"
+                },
+                {
+                    "id": "f",
+                    "title": "Python"
+                },
+                {
+                    "id": "g",
+                    "title": "Machine Learning"
+                },
+                {
+                    "id": "h",
+                    "title": "RPA"
+                }
+            ]
+        }
+    ]
+}
