@@ -33,7 +33,7 @@
                     <ul class="navigation">
                         <li><a href="./about.html">about us</a></li>
                         <li>
-                            <a href="./services.html">services</a>
+                            <a href="./services.html" class="has-menu">services</a>
                             <ul class="nav-sub-menu">
                                 <li>
                                     <a href="./services.html#talent-acquisition">Talent Acquisition</a>
@@ -53,7 +53,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="./training.html">training</a>
+                            <a href="./training.html" class="has-menu">training</a>
                             <ul class="nav-sub-menu">
                                 <li>
                                     <a href="./training.html#data-analysis">Data Analysis</a>
@@ -84,6 +84,11 @@
                         <li><a href="./careers.html">careers</a></li>
                     </ul>
                     <div class="nav-actions">
+                        <div class="hamburger-menu">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
                         <a href="./contact.html" class="btn">
                             Let's talk
                             <span class="btn-icon">
@@ -450,9 +455,9 @@
         <div class="container">
             <div class="footer-wrapper">
                 <div class="footer-info-block">
-                    <a href="" class="footer-logo">
+                    <!-- <a href="" class="footer-logo">
                         <img src="./assets/images/logo.png" alt="Evva Solutions">
-                    </a>
+                    </a> -->
                     <p>Evva Solutios helps you to convert
                         your data into a strategic asset and get business insights Evva helps you to
                         convert. Evva Solutios helps you to convert
@@ -573,6 +578,11 @@
                 }
             });
 
+            $('.hamburger-menu').click(function () {
+                $(this).toggleClass('active');
+                $('.navigation').toggleClass('open')
+            });
+
             const heroSwiper = new Swiper(".hero-swiper", {
                 loop: true,
                 // effect: "fade",
@@ -603,6 +613,13 @@
                     },
                 },
             });
+
+            // $(window).resize(function () {
+            //     var width = $(window).width();
+            //     if (width < 992) {
+            //         $('.navigation>li a.has-menu').attr('href', 'javascript:void(0)');
+            //     }
+            // });
 
         });
     </script>

@@ -119,10 +119,48 @@ header.page-scrolled .logo-wrapper a{
     transform: translateX(8px);
 }
 
+.navigation.open{
+    transform: translateX(0);
+}
+
 .nav-actions{
     padding: 0 0 0 60px;
     display: flex;
     align-items: center;
+    gap: 16px;
+}
+
+.hamburger-menu{
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(45deg, var(--evva-primary-color), var(--evva-primary-accent-color));
+    border-radius: 8px;
+    align-self: center;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hamburger-menu span{
+    width: 24px;
+    height: 2px;
+    background-color: var(--evva-white);
+    border-radius: 2px;
+}
+
+.hamburger-menu.active .middle{
+    opacity: 0;
+}
+
+.hamburger-menu.active .top{
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-menu.active .bottom{
+    transform: rotate(135deg) translate(-5px, 5px);
 }
 
 .hero-section{
@@ -684,6 +722,7 @@ footer{
 }
 
 .internal-hero-content h2{
+    text-align: center;
     font-size: 40px;
     font-weight: 500;
     color: var(--evva-white);

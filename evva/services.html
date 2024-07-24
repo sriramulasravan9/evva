@@ -84,6 +84,11 @@
                         <li><a href="./careers.html">careers</a></li>
                     </ul>
                     <div class="nav-actions">
+                        <div class="hamburger-menu">
+                            <span class="top"></span>
+                            <span class="middle"></span>
+                            <span class="bottom"></span>
+                        </div>
                         <a href="./contact.html" class="btn">
                             Let's talk
                             <span class="btn-icon">
@@ -238,9 +243,9 @@
         <div class="container">
             <div class="footer-wrapper">
                 <div class="footer-info-block">
-                    <a href="" class="footer-logo">
+                    <!-- <a href="" class="footer-logo">
                         <img src="./assets/images/logo.png" alt="Evva Solutions">
-                    </a>
+                    </a> -->
                     <p>Evva Solutios helps you to convert
                         your data into a strategic asset and get business insights Evva helps you to
                         convert. Evva Solutios helps you to convert
@@ -349,6 +354,11 @@
     <script>
         $(document).ready(function () {
             AOS.init();
+
+            $('.hamburger-menu').click(function () {
+                $(this).toggleClass('active');
+                $('.navigation').toggleClass('open')
+            });
 
             $(window).scroll(function () {
                 var scroll = $(window).scrollTop();

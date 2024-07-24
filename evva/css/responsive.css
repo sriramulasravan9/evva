@@ -1,5 +1,45 @@
 @media screen and (max-width: 767px){
+    .container{
+        /* width: 100%; */
+        /* padding: 0 30px; */
+    }
 
+    .section-content-wrapper.two-col-layout,
+    .cards-grid,
+    .offerings-wrapper,
+    .footer-wrapper,
+    .footer-cols{
+        grid-template-columns: 1fr !important;
+    }
+
+    .image-block{
+        height: 350px;
+    }
+
+    section:not(.hero-section):not(.internal-hero-section){
+        padding: 48px 0;
+    }
+    
+    .card{
+        padding: 24px;
+    }
+
+    footer{
+        padding: 40px 0;
+        position: relative;
+    }
+
+    .footer-wrapper{
+        gap: 40px;
+    }
+
+    .footer-addtnl-info{
+        padding-top: 40px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-top: 40px;
+    }
 }
 
 @media screen and (min-width: 768px) and  (max-width: 991px) {
@@ -10,11 +50,143 @@
     
 }
 
-@media screen and (max-width: 1367px) {
-    
+@media screen and (max-width: 991px){
+    .btn{
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+
+    .logo-wrapper a{
+        width: 100px;
+        height: auto;
+    }
+
+    .nav-row{
+        justify-content: space-between;
+    }
+
+    .navigation{        
+        width: 80%;
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(5px);
+        border: unset;
+        padding: 32px;
+        flex-direction: column;
+        gap: 24px;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 300;
+        transform: translateX(-100%);
+    }
+
+    .navigation>li>a::after{
+        display: none;
+    }
+
+    .nav-actions{
+        padding-left: 24px;
+        flex-direction: row-reverse;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+
+    .container{
+        width: unset;
+        max-width: 100%;
+        margin: 0 30px;
+    }
+
+    .cards-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title-wrapper.center-aligned{
+        text-align: left;
+    }
+
+    .section-title-wrapper.center-aligned::after{
+        left: 0;
+        transform: unset;
+    }
+
+    .section-content-wrapper{
+        gap: 48px;
+    }
+
+    .combined-cards-wrapper,
+    .why-evva-container,
+    .services-wrapper,
+    .contact-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .combined-card.image{
+        height: 340px;
+    }
+
+    .combined-card:not(.image){
+        height: unset;
+        padding: 24px;
+    }
+
+    .why-evva-image-wrapper{
+        height: 450px;
+    }
+
+    .services-wrapper,
+    .services-content-wrapper{
+        gap: 40px;
+    }
+
+    .services-list{
+        position: initial;
+        flex-direction: row;
+        overflow: auto;
+    }
+
+    .services-list a{
+        flex: none;
+    }
+
+    .careers-title{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .contact-info-wrapper{
+        position: initial;
+    }
+
+    .contact-info-card, .contact-form-wrapper{
+        padding: 24px;
+    }
+
+    .internal-hero-content-wrapper{
+        padding: 24px;
+    }
+
+    .form-group-wrapper{
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-wrapper{
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .max-w-50{
+        max-width: 100%;
+        text-align: left;
+    }
 }
 
-@media screen and (max-width: 1367px) {
+@media screen and (min-width: 1025px) and (max-width: 1367px) {
     .container{
         max-width: 1240px;
     }
