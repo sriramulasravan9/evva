@@ -33,7 +33,7 @@
                     <ul class="navigation">
                         <li><a href="./about.html">about us</a></li>
                         <li class="current">
-                            <a href="./services.html">services</a>
+                            <a href="./services.html" class="has-menu">services</a>
                             <ul class="nav-sub-menu">
                                 <li>
                                     <a href="./services.html#talent-acquisition">Talent Acquisition</a>
@@ -53,7 +53,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="./training.html">training</a>
+                            <a href="./training.html" class="has-menu">training</a>
                             <ul class="nav-sub-menu">
                                 <li>
                                     <a href="./training.html#data-analysis">Data Analysis</a>
@@ -357,7 +357,11 @@
 
             $('.hamburger-menu').click(function () {
                 $(this).toggleClass('active');
-                $('.navigation').toggleClass('open')
+                $('.navigation').toggleClass('open');
+                $('.navigation>li a.has-menu').attr('href', 'javascript:void(0)');
+                $('.navigation>li a.has-menu').click(function () {
+                    $(this).toggleClass('show-submenu');
+                });
             });
 
             $(window).scroll(function () {

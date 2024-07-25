@@ -212,7 +212,7 @@
                             enhance your workforce with skilled professionals or seeking expert guidance on
                             transformative
                             technologies, we are your trusted partner.</p>
-                        <a href="javascript:void(0)" class="btn mt-40" data-aos="fade-up"
+                        <a href="./about.html" class="btn mt-40" data-aos="fade-up"
                             data-aos-anchor-placement="top-bottom" data-aos-easing="linear" data-aos-duration="600"
                             data-aos-delay="1800">Get more info
                             <span class="btn-icon">
@@ -285,7 +285,9 @@
                 <div class="cards-grid">
                     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"
                         data-aos-delay="0" data-aos-easing="linear">
-                        <div class="card-icon-wrapper"></div>
+                        <div class="card-icon-wrapper">
+                            <img src="./assets/icons/experience.svg" alt="Experience and Expertise">
+                        </div>
                         <h3 class="card-title">Experience and Expertise</h3>
                         <p class="card-content">Our team of Talent Management experts boasts decades of combined
                             experience across diverse industries. We understand the intricate nuances of talent
@@ -297,7 +299,9 @@
                     </div>
                     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"
                         data-aos-delay="500" data-aos-easing="linear">
-                        <div class="card-icon-wrapper"></div>
+                        <div class="card-icon-wrapper">
+                            <img src="./assets/icons/scalable.svg" alt="Scalable Solutions">
+                        </div>
                         <h3 class="card-title">Scalable Solutions</h3>
                         <p class="card-content">Adaptability is key in a fast-paced world. Evva Solutions offers
                             scalable Talent Management solutions that grow with your business, whether you're a startup
@@ -308,7 +312,9 @@
                     </div>
                     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"
                         data-aos-delay="1000" data-aos-easing="linear">
-                        <div class="card-icon-wrapper"></div>
+                        <div class="card-icon-wrapper">
+                            <img src="./assets/icons/insights.svg" alt="Data Driven Insights">
+                        </div>
                         <h3 class="card-title">Data Driven Insights</h3>
                         <p class="card-content">Informed decisions drive success. Leveraging advanced analytics and
                             AI-driven tools, we provide actionable insights that optimize your workforce strategy,
@@ -319,7 +325,9 @@
                     </div>
                     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"
                         data-aos-delay="1500" data-aos-easing="linear">
-                        <div class="card-icon-wrapper"></div>
+                        <div class="card-icon-wrapper">
+                            <img src="./assets/icons/cost-efficiency.svg" alt="Cost Efficiency">
+                        </div>
                         <h3 class="card-title">Cost Efficiency</h3>
                         <p class="card-content">We prioritize cost-effectiveness without compromising quality. By
                             leveraging the latest technologies and streamlined processes, we help you save on
@@ -330,7 +338,9 @@
                     </div>
                     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"
                         data-aos-delay="2000" data-aos-easing="linear">
-                        <div class="card-icon-wrapper"></div>
+                        <div class="card-icon-wrapper">
+                            <img src="./assets/icons/quality-assurance.svg" alt="Quality Assurance">
+                        </div>
                         <h3 class="card-title">Quality Assurance</h3>
                         <p class="card-content">Excellence is non-negotiable at Evva Solutions. Our stringent quality
                             assurance processes ensure that every talent placement meets the highest standards,
@@ -341,7 +351,9 @@
                     </div>
                     <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="600"
                         data-aos-delay="2500" data-aos-easing="linear">
-                        <div class="card-icon-wrapper"></div>
+                        <div class="card-icon-wrapper">
+                            <img src="./assets/icons/partnership.svg" alt="Collaborative Partnership">
+                        </div>
                         <h3 class="card-title">Collaborative Partnership</h3>
                         <p class="card-content">Your success is our priority. At Evva Solutions, we operate as your
                             strategic partner, not just a service provider. We collaborate closely with your team,
@@ -375,7 +387,7 @@
                             are
                             meticulously crafted to empower your team with cutting-edge skills essential for thriving in
                             today's digital landscape</p>
-                        <a href="javascript:void(0)" class="btn mt-40" data-aos="fade-up"
+                        <a href="./about.html" class="btn mt-40" data-aos="fade-up"
                             data-aos-anchor-placement="top-bottom" data-aos-easing="linear" data-aos-duration="600"
                             data-aos-delay="1800">Get more info
                             <span class="btn-icon">
@@ -580,7 +592,11 @@
 
             $('.hamburger-menu').click(function () {
                 $(this).toggleClass('active');
-                $('.navigation').toggleClass('open')
+                $('.navigation').toggleClass('open');
+                $('.navigation>li a.has-menu').attr('href', 'javascript:void(0)');
+                $('.navigation>li a.has-menu').click(function () {
+                    $(this).toggleClass('show-submenu');
+                });
             });
 
             const heroSwiper = new Swiper(".hero-swiper", {
@@ -613,13 +629,6 @@
                     },
                 },
             });
-
-            // $(window).resize(function () {
-            //     var width = $(window).width();
-            //     if (width < 992) {
-            //         $('.navigation>li a.has-menu').attr('href', 'javascript:void(0)');
-            //     }
-            // });
 
         });
     </script>

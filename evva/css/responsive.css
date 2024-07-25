@@ -81,6 +81,10 @@
         transform: translateX(-100%);
     }
 
+    .navigation>li>a{
+        height: unset;
+    }
+
     .navigation>li>a::after{
         display: none;
     }
@@ -92,6 +96,31 @@
 
     .hamburger-menu{
         display: flex;
+    }
+
+    .navigation>li .nav-sub-menu{
+        position: initial;
+        height: 0;
+        background-color: unset;
+        backdrop-filter: unset;
+        border-radius: unset;
+        box-shadow: unset;
+        padding: 0;
+    }
+
+    .navigation>li .nav-sub-menu li:not(:last-child){
+        margin-bottom: 16px;
+    }
+
+    .navigation>li .nav-sub-menu li a{
+        padding: 0 0 0 12px;
+    }
+
+    .navigation>li a.has-menu.show-submenu+.nav-sub-menu{
+        height: auto;
+        padding: 16px 0 0;
+        opacity: 1;
+        visibility: visible;
     }
 
     .container{
