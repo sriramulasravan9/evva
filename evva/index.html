@@ -31,6 +31,7 @@
                         </a>
                     </div>
                     <ul class="navigation">
+                        <li class="current"><a href="./index.html">home</a></li>
                         <li><a href="./about.html">about us</a></li>
                         <li>
                             <a href="./services.html" class="has-menu">services</a>
@@ -570,6 +571,10 @@
         </div>
     </footer>
 
+    <span class="goToTop">
+        <img src="./assets/images/arrow-next-white.png" alt="Go To Top" />
+    </span>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -585,10 +590,16 @@
 
                 if (scroll >= 100) {
                     $("header").addClass("page-scrolled");
+                    $('.goToTop').addClass('show');
                 } else {
                     $("header").removeClass("page-scrolled");
+                    $('.goToTop').removeClass('show');
                 }
             });
+
+            $('.goToTop').click(function () {
+                $("html, body").animate({ scrollTop: 0 });
+            })
 
             $('.hamburger-menu').click(function () {
                 $(this).toggleClass('active');
